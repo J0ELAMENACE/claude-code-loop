@@ -1,0 +1,12 @@
+# Specs générés (garder les templates, ignorer les fichiers réels)
+specs/projet.md
+specs/progress.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp

@@ -1,0 +1,1 @@
+Tu lis specs/projet.md et specs/progress.md. Tu écris un résumé clair dans specs/progress.md : pourcentage estimé de complétion, besoins couverts, besoins restants, blocages identifiés, décisions prises. Tu affiches ce résumé dans le chat. Cette commande ne modifie pas le code.

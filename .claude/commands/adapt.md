@@ -1,0 +1,1 @@
+Tu lis la section "Contexte tech" dans specs/projet.md. Tu adaptes ton comportement pour le reste de la session : conventions de nommage, structure de fichiers, format des tests, style de code, outils de build. Tu affiches une confirmation de ce que tu as détecté et comment tu vas t'adapter. Cette commande ne modifie pas le code.

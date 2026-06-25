@@ -1,0 +1,41 @@
+# Spec du projet — [NOM DU PROJET]
+
+> Ce fichier est généré par /spec. Ne le modifie qu'entre deux cycles de build.
+
+## Objectif
+
+[1 phrase décrivant ce que fait le projet]
+
+## Contexte tech
+
+- **Langage** :
+- **Framework** :
+- **Base de données** :
+- **CI/CD** :
+- **Tests** :
+- **Conventions** :
+- **Environnement** :
+
+## Besoins fonctionnels
+
+1. [Besoin vérifiable]
+2. [Besoin vérifiable]
+3. [Besoin vérifiable]
+
+## Besoins non-fonctionnels
+
+- Tests : [ex: couverture > 80%, testify obligatoire]
+- Performance : [ex: réponse < 200ms]
+- Sécurité : [ex: pas de secrets en dur]
+- Conventions : [ex: PascalCase, snake_case...]
+
+## Cas limites
+
+- [Ce qui ne doit pas arriver]
+- [Comportement attendu en cas d'erreur]
+
+## Définition de terminé
+
+- [ ] [Critère objectif 1]
+- [ ] [Critère objectif 2]
+- [ ] [Critère objectif 3]
