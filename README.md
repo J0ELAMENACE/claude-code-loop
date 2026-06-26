@@ -1,70 +1,70 @@
-# 🔁 Claude Code Loop System
+﻿# ðŸ” Claude Code Loop System
 
-Un système de 5 commandes pour Claude Code qui forme une loop de développement autonome, disciplinée et adaptable à n'importe quel type de projet.
+Un systÃ¨me de 5 commandes pour Claude Code qui forme une loop de dÃ©veloppement autonome, disciplinÃ©e et adaptable Ã  n'importe quel type de projet.
 
 ```
-/spec → /adapt → /build → /review → /build → ... → /checkpoint → ✅
+/spec â†’ /adapt â†’ /build â†’ /review â†’ /build â†’ ... â†’ /checkpoint â†’ âœ…
 ```
 
 ## Pourquoi ?
 
-Claude Code sur-génère par défaut. Ce système le contraint à :
+Claude Code sur-gÃ©nÃ¨re par dÃ©faut. Ce systÃ¨me le contraint Ã  :
 - **Clarifier avant de construire** (`/spec`)
-- **S'adapter à ta stack** (`/adapt`)
+- **S'adapter Ã  ta stack** (`/adapt`)
 - **Construire strictement** (`/build`)
-- **Vérifier et corriger** (`/review`)
-- **Tracker l'état** (`/checkpoint`)
+- **VÃ©rifier et corriger** (`/review`)
+- **Tracker l'Ã©tat** (`/checkpoint`)
 
 ## Installation
 
-### Option 1 — Copier les commandes directement
+### Option 1 â€” Copier les commandes directement
 
-Clone le repo et copie le dossier `.claude/` à la racine de ton projet :
+Clone le repo et copie le dossier `.claude/` Ã  la racine de ton projet :
 
 ```bash
-git clone https://github.com/TON_USERNAME/claude-code-loop.git
+git clone https://github.com/J0ELAMENACE/claude-code-loop.git
 cp -r claude-code-loop/.claude/ ton-projet/
 ```
 
-### Option 2 — Master prompt
+### Option 2 â€” Master prompt
 
-Colle le contenu de [`docs/master-prompt.md`](docs/master-prompt.md) dans Claude Code. Il crée automatiquement toutes les commandes.
+Colle le contenu de [`docs/master-prompt.md`](docs/master-prompt.md) dans Claude Code. Il crÃ©e automatiquement toutes les commandes.
 
 ## Utilisation rapide
 
 ```
-/spec       → interview + écriture du plan
-/adapt      → calibration sur ta stack
-/build      → construction stricte selon le spec
-/review     → vérification et corrections
-/checkpoint → snapshot en cas de pause ou blocage
+/spec       â†’ interview + Ã©criture du plan
+/adapt      â†’ calibration sur ta stack
+/build      â†’ construction stricte selon le spec
+/review     â†’ vÃ©rification et corrections
+/checkpoint â†’ snapshot en cas de pause ou blocage
 ```
 
 ## Les commandes
 
-| Commande | Rôle | Modifie le code ? |
+| Commande | RÃ´le | Modifie le code ? |
 |---|---|---|
-| `/spec` | Interview + plan dans `specs/projet.md` | ❌ |
-| `/adapt` | Détecte la stack, calibre le comportement | ❌ |
-| `/build` | Construit strictement selon le spec | ✅ |
-| `/review` | Vérifie, catégorise les écarts, corrige | ✅ |
-| `/checkpoint` | Snapshot de l'état dans `specs/progress.md` | ❌ |
+| `/spec` | Interview + plan dans `specs/projet.md` | âŒ |
+| `/adapt` | DÃ©tecte la stack, calibre le comportement | âŒ |
+| `/build` | Construit strictement selon le spec | âœ… |
+| `/review` | VÃ©rifie, catÃ©gorise les Ã©carts, corrige | âœ… |
+| `/checkpoint` | Snapshot de l'Ã©tat dans `specs/progress.md` | âŒ |
 
-## Structure générée dans ton projet
+## Structure gÃ©nÃ©rÃ©e dans ton projet
 
 ```
 ton-projet/
-├── .claude/
-│   └── commands/
-│       ├── spec.md
-│       ├── adapt.md
-│       ├── build.md
-│       ├── review.md
-│       └── checkpoint.md
-├── specs/
-│   ├── projet.md        ← source de vérité (généré par /spec)
-│   └── progress.md      ← état courant (généré par /build et /checkpoint)
-└── ... (ton code)
+â”œâ”€â”€ .claude/
+â”‚   â””â”€â”€ commands/
+â”‚       â”œâ”€â”€ spec.md
+â”‚       â”œâ”€â”€ adapt.md
+â”‚       â”œâ”€â”€ build.md
+â”‚       â”œâ”€â”€ review.md
+â”‚       â””â”€â”€ checkpoint.md
+â”œâ”€â”€ specs/
+â”‚   â”œâ”€â”€ projet.md        â† source de vÃ©ritÃ© (gÃ©nÃ©rÃ© par /spec)
+â”‚   â””â”€â”€ progress.md      â† Ã©tat courant (gÃ©nÃ©rÃ© par /build et /checkpoint)
+â””â”€â”€ ... (ton code)
 ```
 
 ## Documentation
@@ -73,16 +73,16 @@ ton-projet/
 - [Master prompt d'installation](docs/master-prompt.md)
 - [Exemples par stack](docs/exemples-stack.md)
 
-## Règles d'or
+## RÃ¨gles d'or
 
-1. **Ne saute jamais `/spec`** — un brief vague = un résultat raté
-2. **Lance `/adapt` après `/spec`** — surtout sur des stacks spécifiques
-3. **`specs/projet.md` est sacré** — ne le modifie qu'entre deux cycles
-4. **Si `/review` boucle 3 fois** — c'est un signal, pas un bug
+1. **Ne saute jamais `/spec`** â€” un brief vague = un rÃ©sultat ratÃ©
+2. **Lance `/adapt` aprÃ¨s `/spec`** â€” surtout sur des stacks spÃ©cifiques
+3. **`specs/projet.md` est sacrÃ©** â€” ne le modifie qu'entre deux cycles
+4. **Si `/review` boucle 3 fois** â€” c'est un signal, pas un bug
 5. **`/checkpoint` avant toute pause longue**
 
-## Compatibilité
+## CompatibilitÃ©
 
-Testé et pensé pour : Go · Python · JavaScript/TypeScript · Rust  
-CI/CD : GitLab CI · GitHub Actions  
-Projets solo ou en équipe
+TestÃ© et pensÃ© pour : Go Â· Python Â· JavaScript/TypeScript Â· Rust  
+CI/CD : GitLab CI Â· GitHub Actions  
+Projets solo ou en Ã©quipe
